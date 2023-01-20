@@ -22,7 +22,7 @@ components:
       $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/messages/paymentMethod.yaml'
   schemas:
     demandePaiement:
-      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/messages/demandePaiement.yaml'
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/demandePaiement.yaml'
     paymentMethod:
       $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/paymentMethod.yaml'
   securitySchemes:

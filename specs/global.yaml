@@ -27,14 +27,14 @@ channels:
 components:
   messages:
     demandePaiement:
-      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/messages/demandePaiement.yaml'
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/messages/demandePaiement.yaml'
   schemas:
     demandePaiement:
-      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/schemas/demandePaiement.yaml'
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/demandePaiement.yaml'
     person:
-      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/schemas/person.yaml'
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/person.yaml'
     amount:
-      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/schemas/amount.yaml'
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/amount.yaml'
   securitySchemes:
     keycloak:
       type: oauth2

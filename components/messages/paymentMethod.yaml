@@ -1,0 +1,17 @@
+name: paymentMethod
+title: Methode de paiement
+summary: Methode de paiement
+description: Methode de paiement
+payload:
+  $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/paymentMethod.yaml'
+traits:
+  - $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/traits/eventCommons.yaml'
+contentType: application/vnd.apache.avro
+bindings:
+  kafka:
+    key:
+      type: string
+      enum: ['type']
+    schemaIdLocation: 'header'
+    schemaIdPayloadEncoding: 'confluent'
+    bindingVersion: '0.3.0'

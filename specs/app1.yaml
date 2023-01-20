@@ -1,7 +1,7 @@
 asyncapi: '2.5.0'
-id: 'urn:fr:eda:kafka:sample'
+id: 'urn:fr:eda:app:sample'
 info:
-  title: Sample Kafka EDA description
+  title: Sample kafka related application
   version: 0.0.1
   description: >
     TODO
@@ -22,10 +22,6 @@ defaultContentType: application/vnd.apache.avro
 channels:
   pro01.XXX.demandePaiement.pub:
     $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/channels/demandePaiement-publish.yaml'
-  pro01.XXX.demandePaiement.sub:
-    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/channels/demandePaiement-subscribe.yaml'
-  pro01.XXX.paymentMethod.pub:
-    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/channels/paymentMethod-publish.yaml'
   pro01.XXX.paymentMethod.sub:
     $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/channels/paymentMethod-subscribe.yaml'
 components:
@@ -36,11 +32,7 @@ components:
       $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/messages/paymentMethod.yaml'
   schemas:
     demandePaiement:
-      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/demandePaiement.yaml'
-    person:
-      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/person.yaml'
-    amount:
-      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/amount.yaml'
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/messages/demandePaiement.yaml'
     paymentMethod:
       $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/paymentMethod.yaml'
   securitySchemes:

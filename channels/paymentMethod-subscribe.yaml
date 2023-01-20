@@ -1,0 +1,20 @@
+description: Topic de gestion des methodes de paiement
+subscribe:
+  operationId: consommation-payment-method
+  summary: Consommation des évènements de gestion des methodes de paiement
+  tags:
+    - name: XXXX
+    - name: Paiement
+  message:
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/messages/paymentMethod.yaml'
+  bindings:
+    kafka:
+      groupId:
+        type: string
+        enum: ['dev02.SntXXX_YYY.monConsommateurListener', 'dev02.RafXXX_YYY.monConsommateurListener']
+      clientId:
+        type: string
+        enum: ['myClientId']
+      bindingVersion: '0.3.0'
+bindings:
+  $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/bindings/pro01-XXX-paymentMethod.yaml'

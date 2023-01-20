@@ -1,6 +1,6 @@
 correlationId:
   description: Identifiant de corrélation métier
-  location: $message.header#/recouv.id
+  location: $message.header#/id
 headers:
   type: object
   properties:
@@ -28,7 +28,7 @@ headers:
       type: string
       example: application/vnd.xxx.yyy.demandePaiement-1+avro
       description: Type de l'évènement
-    recouv.id:
+    id:
       type: string
       description: >-
         Identifiant de corrélation métier

@@ -1,0 +1,6 @@
+bindings:
+  kafka:
+    topic: 'demandePaiement'
+    partitions: 1
+    replicas: 3
+    bindingVersion: '0.3.0'

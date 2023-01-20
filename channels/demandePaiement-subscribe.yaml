@@ -16,3 +16,5 @@ subscribe:
         type: string
         enum: ['myClientId']
       bindingVersion: '0.3.0'
+bindings:
+  $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/bindings/pro01-XXX-demandePaiement.yaml'

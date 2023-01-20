@@ -1,0 +1,15 @@
+description: Topic de gestion des methodes de paiement
+publish:
+  operationId: production-payment-method
+  summary: Production des évènements de gestion des methodes de paiement
+  tags:
+    - name: XXXX
+    - name: Paiement
+  message:
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/messages/paymentMethod.yaml'
+  bindings:
+    kafka:
+      clientId:
+        type: string
+        enum: ['myClientId']
+      bindingVersion: '0.3.0'

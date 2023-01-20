@@ -1,0 +1,9 @@
+url: 'localhost:9092'
+description: Development server
+protocol: kafka-secure
+protocolVersion: 2.6.0
+security:
+  - keycloak: []
+bindings:
+  kafka:
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/bindings/servers/kafka-dev.yaml'

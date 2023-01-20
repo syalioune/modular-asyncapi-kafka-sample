@@ -7,17 +7,7 @@ info:
     TODO
 servers:
   dev-ssl:
-    url: 'localhost:9092'
-    description: Development server
-    protocol: kafka-secure
-    protocolVersion: 2.6.0
-    security:
-      - keycloak: []
-    bindings:
-      kafka:
-        schemaRegistryUrl: 'https://my-schema-registry.com'
-        schemaRegistryVendor: 'confluent'
-        bindingVersion: '0.3.0'
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/servers/kafka-dev.yaml'
 defaultContentType: application/vnd.apache.avro
 channels:
   pro01.XXX.demandePaiement.pub:

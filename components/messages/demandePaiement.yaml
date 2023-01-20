@@ -1,0 +1,17 @@
+name: demandePaiement
+title: Demande de paiement
+summary: Demande de paiement
+description: Demande de paiement
+payload:
+  $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/demandePaiement.yaml'
+traits:
+  - $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/traits/eventCommons.yaml'
+contentType: application/vnd.apache.avro
+bindings:
+  kafka:
+    key:
+      type: string
+      enum: ['idPaiement']
+    schemaIdLocation: 'header'
+    schemaIdPayloadEncoding: 'confluent'
+    bindingVersion: '0.3.0'

@@ -1,0 +1,48 @@
+type: object
+properties:
+  uuid:
+    type: string
+    format: uuid v4
+    description: payment uuid.
+    example: 514f7cb7-3b7b-461b-b41d-fe734f329990
+  status:
+    type: string
+    enum:
+      - CONFIRMED
+      - CANCELLED
+      - ERROR
+      - REFUSED
+      - UNAUTHORIZED
+      - PENDING
+    description: SR Status.
+    example: CONFIRMED
+  externalId:
+    type: string
+    description: Provider external id of the transaction.
+    example: 12345
+  customer:
+    type: object
+    properties:
+      externalId:
+        description: External ID of the customer
+        type: string
+        example: '123456'
+      person:
+        $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/person.yaml'
+    required:
+      - externalId
+  totalAmount:
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/amount.yaml'
+  reason:
+    type: string
+    description: >-
+      If operation is a cancellation, reason why the payment was
+      cancelled
+    example: Cancelled by user
+  processedBy:
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/schemas/person.yaml'
+required:
+  - uuid
+  - status
+  - externalId
+  - totalAmount

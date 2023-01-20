@@ -1,0 +1,20 @@
+type: object
+properties:
+  amount:
+    type: number
+    description: Amount of transaction. If currency is EUR the amount is in cents.
+    example: 5000
+  currency:
+    type: string
+    description: Currency of the transaction.
+    example: EUR
+  scale:
+    type: number
+    description: >-
+      Number of decimals used for the amounts.
+      <<amount>>*10^-<<scale>>=real Amount in <<currency>>.
+    example: 2
+required:
+  - amount
+  - currency
+  - scale

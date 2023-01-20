@@ -1,0 +1,45 @@
+asyncapi: '2.5.0'
+id: 'urn:fr:eda:kafka:sample'
+info:
+  title: Sample Kafka EDA description
+  version: 0.0.1
+  description: >
+    TODO
+servers:
+  dev-ssl:
+    url: 'localhost:9092'
+    description: Development server
+    protocol: kafka-secure
+    protocolVersion: 2.6.0
+    security:
+      - keycloak: []
+    bindings:
+      kafka:
+        schemaRegistryUrl: 'https://my-schema-registry.com'
+        schemaRegistryVendor: 'confluent'
+        bindingVersion: '0.3.0'
+defaultContentType: application/vnd.apache.avro
+channels:
+  pro01.XXX.demandePaiement.pub:
+    $ref: 'https://raw.githubusercontent.com/modular-asyncapi-kafka-sample/main/channels/demandePaiement-publish.yaml'
+  pro01.XXX.demandePaiement.sub:
+    $ref: 'https://raw.githubusercontent.com/modular-asyncapi-kafka-sample/main/channels/demandePaiement-subscribe.yaml'
+components:
+  messages:
+    demandePaiement:
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/messages/demandePaiement.yaml'
+  schemas:
+    demandePaiement:
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/schemas/demandePaiement.yaml'
+    person:
+      $ref: 'https://raw.githubusercontent.com/syalioune/test-asyncapi-refs/main/asyncapi-subspec-components.yaml#/components/schemas/person'
+    amount:
+      $ref: 'https://raw.githubusercontent.com/syalioune/test-asyncapi-refs/main/asyncapi-subspec-components.yaml#/components/schemas/amount'
+  securitySchemes:
+    keycloak:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://keycloak/auth
+          scopes:
+            kafka: Custom scope to access Kafka

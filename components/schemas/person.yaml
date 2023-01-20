@@ -1,0 +1,78 @@
+type: object
+properties:
+  civility:
+    type: string
+    enum:
+      - mme
+      - m
+    description: Civility
+    example: m
+  firstName:
+    type: string
+    description: First name
+    example: Jean
+  lastName:
+    type: string
+    description: Last name
+    example: Dupond
+  birthDate:
+    type: string
+    format: date
+    description: Birth date yyyy-MM-dd
+    example: '1975-06-19'
+  contactMethods:
+    type: array
+    items:
+      type: object
+      properties:
+        type:
+          type: string
+          description: contact method type
+          enum:
+            - email
+            - phone
+          example: phone
+        value:
+          type: string
+          description: contact method value
+          example: jean.dupond@laposte.net
+  locations:
+    type: object
+    properties:
+      type:
+        type: string
+        description: Location type
+        enum:
+          - home
+        example: home
+      line2:
+        type: string
+        description: Adress line 2
+        example: Apt 14 Escalier C
+      line3:
+        type: string
+        description: Adress line 3
+        example: Résidence Les Mimosas
+      line4:
+        type: string
+        description: Adress line 4
+        example: 13 Boulevard Mac-Mahon
+      line5:
+        type: string
+        description: Adress line 5
+        example: Lieu dit
+      zipCode:
+        type: string
+        description: Zip code
+        example: 75001
+      cityName:
+        type: string
+        description: City name
+        example: Paris
+      countryName:
+        type: string
+        description: Country name
+        example: France
+required:
+  - firstName
+  - lastName

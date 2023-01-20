@@ -1,0 +1,18 @@
+description: Topic de demande de paiement
+subscribe:
+  operationId: consommation-demande-paiement
+  summary: Consommation des évènements de demande de paiement
+  tags:
+    - name: XXXX
+    - name: Paiement
+  message:
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/components/messages/demandePaiement.yaml'
+  bindings:
+    kafka:
+      groupId:
+        type: string
+        enum: ['dev02.SntXXX_YYY.monConsommateurListener', 'dev02.RafXXX_YYY.monConsommateurListener']
+      clientId:
+        type: string
+        enum: ['myClientId']
+      bindingVersion: '0.3.0'

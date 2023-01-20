@@ -1,0 +1,45 @@
+correlationId:
+  description: Identifiant de corrélation métier
+  location: $message.header#/recouv.id
+headers:
+  type: object
+  properties:
+    timestamp:
+      type: number
+      example: 1568545765
+      description: Timestamp métier de l'évènement
+    codeApplication:
+      type: string
+      enum:
+        - XXXX
+        - YYYY
+      description: Code applicatif
+      example: XXXX
+    statut:
+      type: string
+      enum:
+        - créé
+        - modifié
+        - supprimé
+        - fini
+        - envoyé
+      description: Statut de l'évènement
+    type:
+      type: string
+      example: application/vnd.xxx.yyy.demandePaiement-1+avro
+      description: Type de l'évènement
+    recouv.id:
+      type: string
+      description: >-
+        Identifiant de corrélation métier
+    traceId:
+      type: string
+      description: >-
+        Identifiant de corrélation technique
+    spanId:
+      type: string
+      description: Identifiant de sous trace technique
+    parentSpanId:
+      type: string
+      description: Identifiant de sous trace parente
+  

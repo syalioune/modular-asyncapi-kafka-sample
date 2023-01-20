@@ -21,9 +21,9 @@ servers:
 defaultContentType: application/vnd.apache.avro
 channels:
   pro01.XXX.demandePaiement.pub:
-    $ref: 'https://raw.githubusercontent.com/modular-asyncapi-kafka-sample/main/channels/demandePaiement-publish.yaml'
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/channels/demandePaiement-publish.yaml'
   pro01.XXX.demandePaiement.sub:
-    $ref: 'https://raw.githubusercontent.com/modular-asyncapi-kafka-sample/main/channels/demandePaiement-subscribe.yaml'
+    $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/channels/demandePaiement-subscribe.yaml'
 components:
   messages:
     demandePaiement:
@@ -32,9 +32,9 @@ components:
     demandePaiement:
       $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/schemas/demandePaiement.yaml'
     person:
-      $ref: 'https://raw.githubusercontent.com/syalioune/test-asyncapi-refs/main/asyncapi-subspec-components.yaml#/components/schemas/person'
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/schemas/person.yaml'
     amount:
-      $ref: 'https://raw.githubusercontent.com/syalioune/test-asyncapi-refs/main/asyncapi-subspec-components.yaml#/components/schemas/amount'
+      $ref: 'https://raw.githubusercontent.com/syalioune/modular-asyncapi-kafka-sample/main/schemas/amount.yaml'
   securitySchemes:
     keycloak:
       type: oauth2
